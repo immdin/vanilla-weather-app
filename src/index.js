@@ -43,11 +43,11 @@ function showWeather(response) {
     response.data.main.feels_like
   )}°`;
   let humidity = document.querySelector(".humidity");
-  humidity.innerHTML = `${response.data.main.humidity}%`;
+  humidity.innerHTML = ` ${response.data.main.humidity}%`;
   let wind = document.querySelector(".wind");
-  wind.innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
+  wind.innerHTML = ` ${Math.round(response.data.wind.speed)}km/h`;
   let pressure = document.querySelector(".pressure");
-  pressure.innerHTML = `${Math.round(response.data.main.pressure)}mb`;
+  pressure.innerHTML = ` ${Math.round(response.data.main.pressure)}mb`;
 }
 function showCurrentPlace(position) {
   let lat = position.coords.latitude;
