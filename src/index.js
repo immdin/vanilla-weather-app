@@ -9,6 +9,10 @@ const opts = {
 let data = Intl.DateTimeFormat("en-US", opts).format(now);
 date.innerHTML = `Last updated: ${data}`;
 
+if (now.getHours() >= 16) {
+  background.style.backgroundImage = 'url("src/styleLight.css")';
+}
+
 function searchCity(cityName) {
   let apiKey = "6c67fa383e767f87b00cfc48883a902d";
   let units = "metric";
