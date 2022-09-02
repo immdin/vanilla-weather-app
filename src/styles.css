@@ -241,8 +241,14 @@ h1 {
     color: white;
 }
 
-img {
+#icon {
     justify-content: center;
+
+    transform: scale(1.7);
+    margin: 0 auto;
+    display: block;
+
+
 }
 
 .footer {
