@@ -1,18 +1,27 @@
-function formatDate() {
+function formatDate(timezone, timezoneMinutes) {
   let now = new Date();
-  let date = document.querySelector("#data");
-  const opts = {
-    weekday: "long",
-    hour: "numeric",
-    hour12: false,
-    minute: "numeric",
-  };
 
-  let data = Intl.DateTimeFormat("en-US", opts).format(now);
+  now.setHours(now.getUTCHours() + timezone);
+  now.setMinutes(now.getUTCMinutes() + timezoneMinutes);
+  let hour = now.getHours();
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
 
-  date.innerHTML = data;
+  document.querySelector("#data").innerHTML = `${day} | ${hour}:${minutes}`;
 }
-formatDate();
+
 function searchCity(cityName) {
   let apiKey = "6c67fa383e767f87b00cfc48883a902d";
   let units = "metric";
@@ -48,6 +57,7 @@ function showWeather(response) {
   pressure.innerHTML = ` ${Math.round(response.data.main.pressure)}mb`;
   timezone = response.data.timezone / 3600;
   timezoneMinutes = (response.data.timezone % 3600) / 60;
+
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -55,6 +65,9 @@ function showWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+setInterval(function () {
+  formatDate(timezone, timezoneMinutes);
+}, 1000);
 
 function showCurrentPlace(position) {
   let lat = position.coords.latitude;
