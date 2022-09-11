@@ -1,5 +1,5 @@
 .app-body {
-    height: 100vh;
+
     background-image: linear-gradient(315deg,
             #b8c6db 0%,
             #5D5FEF 74%);
@@ -248,6 +248,40 @@ h1 {
     display: block;
 
 
+}
+
+.col-2 {
+    font-size: 20px;
+    font-weight: 200;
+    border: none;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 8%;
+    padding-top: 8%;
+    flex-grow: 1;
+}
+
+.week-day {
+    font-weight: 400;
+}
+
+.f-icon {
+    width: 45px;
+}
+
+.degree-symbol {
+    font-size: 17px;
+}
+
+/*.weather-forecast {
+    margin-top: 20px;
+    color: #000;
+}
+
+*/
+.temp-min {
+    opacity: 0.5;
 }
 
 
