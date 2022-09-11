@@ -250,7 +250,7 @@ h1 {
 
 }
 
-.col-2 {
+.weather-forecast {
     font-size: 20px;
     font-weight: 200;
     border: none;
@@ -274,12 +274,6 @@ h1 {
     font-size: 17px;
 }
 
-/*.weather-forecast {
-    margin-top: 20px;
-    color: #000;
-}
-
-*/
 .temp-min {
     opacity: 0.5;
 }
