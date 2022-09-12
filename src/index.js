@@ -162,12 +162,8 @@ function searchCity(cityName) {
 function submitForm(event) {
   event.preventDefault();
   let cityName = document.querySelector("#text-input").value;
+
   searchCity(cityName);
-  if (cityName) {
-    searchCity(cityName);
-  } else {
-    alert(`Please enter a city`);
-  }
 }
 
 setInterval(function () {
