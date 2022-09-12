@@ -1,5 +1,5 @@
 .app-body {
-
+    display: flex;
     background-image: linear-gradient(315deg,
             #b8c6db 0%,
             #5D5FEF 74%);
@@ -24,8 +24,7 @@
 .form-container {
     margin-bottom: 50px;
     text-align: center;
-    padding: 5% 0 0 10%;
-
+    padding: 5% 0% 0% 3%;
     border-radius: 56px;
 
 }
