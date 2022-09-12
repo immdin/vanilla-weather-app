@@ -1,10 +1,10 @@
 .app-body {
-
+    display: flex;
     background-image: linear-gradient(315deg,
             #b8c6db 0%,
             #5D5FEF 74%);
     background-attachment: fixed;
-    display: flex;
+
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -24,7 +24,8 @@
 .form-container {
     margin-bottom: 50px;
     text-align: center;
-    padding: 5% 5% 0 5%;
+    padding: 5% 0 0 10%;
+
     border-radius: 56px;
 
 }
@@ -225,12 +226,9 @@ h1 {
     color: rgba(0, 0, 0, 0.246);
 }
 
-
-
-
 .comm {
-    font-size: 35px;
-    vertical-align: middle;
+    font-size: 50px;
+    vertical-align: text-top;
     text-decoration: none;
 
 
@@ -238,7 +236,8 @@ h1 {
 
 
 .active {
-    color: white;
+    color: #565a99;
+    ;
 }
 
 #icon {
@@ -258,8 +257,19 @@ h1 {
     text-align: center;
     margin: 0 auto;
     padding-bottom: 8%;
-    padding-top: 8%;
+    padding-top: 3%;
     flex-grow: 1;
+    width: 1150px;
+}
+
+.temp-max,
+.temp-min {
+    font-size: 20px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+
 }
 
 .week-day {
@@ -270,23 +280,11 @@ h1 {
     width: 45px;
 }
 
-.degree-symbol {
-    font-size: 17px;
-}
+
 
 .temp-min {
     opacity: 0.5;
 }
-
-
-
-
-
-
-
-
-
-
 
 .footer {
     text-transform: none;
